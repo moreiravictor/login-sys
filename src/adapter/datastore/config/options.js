@@ -1,6 +1,5 @@
 function omitPrivate(doc, obj) {
     delete obj.__v
-    delete obj._id
     return obj
 }
 
