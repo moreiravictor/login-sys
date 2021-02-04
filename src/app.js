@@ -1,6 +1,7 @@
 import express, { json } from 'express';
 import routes from './adapter/http/config/routes.js';
 import errorHandler from './adapter/http/middlewares/errorHandler.js'
+import './adapter/datastore/database.js'
 
 class App {
     constructor() {
