@@ -29,6 +29,8 @@ username: admin
 
 password:12345678
 
+PS2: Some example calls can be found at ./login-sys.postman_collection.json
+
 ## Admin Routes
 
 ### 1. POST admin Login (/api/service/master/auth/login)
