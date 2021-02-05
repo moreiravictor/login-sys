@@ -1,5 +1,5 @@
-import User from "../../adapter/datastore/schema/userschema.js"
-import { BadRequest, NotFound } from "../util/error.js"
+import User from "../../adapter/datastore/schema/userSchema.js"
+import { NotFound } from "../util/error.js"
 import {default_admin} from '../util/data.js'
 
 export default {

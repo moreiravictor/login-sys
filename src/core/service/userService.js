@@ -1,4 +1,4 @@
-import User from "../../adapter/datastore/schema/userschema.js";
+import User from "../../adapter/datastore/schema/userSchema.js";
 import { BadRequest } from "../util/error.js";
 import authService from "./authService.js";
 

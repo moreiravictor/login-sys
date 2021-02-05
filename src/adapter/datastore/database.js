@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 import adminService from '../../core/service/adminService.js'
 
-mongoose.connect('mongodb://localhost/monks', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://mongo:27017/monks', {useNewUrlParser: true, useUnifiedTopology: true})
 
 const db = mongoose.connection
 
