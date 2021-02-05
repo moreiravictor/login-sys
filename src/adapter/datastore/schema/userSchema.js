@@ -22,12 +22,16 @@ const UserSchema = new Schema({
         type: String ,
         required: true
     },
+    last_token: {
+        type: String,
+        required: false
+    },
     tokens: [{
         token: {
             type: String ,
             required: true
         }
-    }]
+    }] 
 }, options) 
 
 export default mongoose.model('users', UserSchema)
