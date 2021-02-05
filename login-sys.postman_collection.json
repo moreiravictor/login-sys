@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "6a1f5ce3-da6c-4976-80ed-f52fcfef8c30",
+		"name": "login-sys",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/service/user/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"service",
+						"user",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin profile get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDFkNTcxMWNjZjE2YTAwMjE4ZTRjM2MiLCJsb2dpbl90eXBlIjoiYWRtaW4iLCJpYXQiOjE2MTI1MzY5MzUsImV4cCI6MTYxMjUzNzIzNX0.YbyAmQsLk1cAAuh8Bb_MpD6taSymr1AUn4HDrCGixEo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"patched_josnas\",\r\n    \"username\": \"patched_jojo\",\r\n    \"login_type\": \"common\",\r\n    \"tokens\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/service/master/profile/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"service",
+						"master",
+						"profile",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change admin password",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDFkNTcxMWNjZjE2YTAwMjE4ZTRjM2MiLCJsb2dpbl90eXBlIjoiYWRtaW4iLCJpYXQiOjE2MTI1Mzc0NjUsImV4cCI6MTYxMjUzNzc2NX0.iFHCytMX5fZwXU713eSYfpwwD0VLo89rG1clNzfqFeI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"pppppppppppp\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/service/master/profile/update/:admin_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"service",
+						"master",
+						"profile",
+						"update",
+						":admin_id"
+					],
+					"variable": [
+						{
+							"key": "admin_id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDFkNTcxMWNjZjE2YTAwMjE4ZTRjM2MiLCJsb2dpbl90eXBlIjoiYWRtaW4iLCJpYXQiOjE2MTI1Mzc0NjUsImV4cCI6MTYxMjUzNzc2NX0.iFHCytMX5fZwXU713eSYfpwwD0VLo89rG1clNzfqFeI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"teste\",\r\n    \"username\": \"teste\",\r\n    \"login_type\": \"common\",\r\n    \"password\": \"testeteste\",\r\n    \"tokens\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/service/master/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"service",
+						"master",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patch user info",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDFkNTcxMWNjZjE2YTAwMjE4ZTRjM2MiLCJsb2dpbl90eXBlIjoiYWRtaW4iLCJpYXQiOjE2MTI1MzgzODgsImV4cCI6MTYxMjUzODY4OH0.qmqMRY2Vzycy8u4MoC9u1_aQmsZtuaCQzEZnVXMZ2Wk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"teste_atualizado\",\r\n    \"username\": \"teste_atualizado\",\r\n    \"login_type\": \"teste_atualizado\",\r\n    \"password\": \"teste_atualizado\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/service/master/user/update/:user_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"service",
+						"master",
+						"user",
+						"update",
+						":user_id"
+					],
+					"variable": [
+						{
+							"key": "user_id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDFkNTcxMWNjZjE2YTAwMjE4ZTRjM2MiLCJsb2dpbl90eXBlIjoiYWRtaW4iLCJpYXQiOjE2MTI1MzgzODgsImV4cCI6MTYxMjUzODY4OH0.qmqMRY2Vzycy8u4MoC9u1_aQmsZtuaCQzEZnVXMZ2Wk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/service/master/user/delete/601d5ef7432e020021f3f8b0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"service",
+						"master",
+						"user",
+						"delete",
+						"601d5ef7432e020021f3f8b0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lista all users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDFkNTcxMWNjZjE2YTAwMjE4ZTRjM2MiLCJsb2dpbl90eXBlIjoiYWRtaW4iLCJpYXQiOjE2MTI1Mzg2MjUsImV4cCI6MTYxMjUzODkyNX0.OALdjopXiuVD3X7R_UecCV08YnYRLw8kJqxQQaqzXTo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/service/master/user/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"service",
+						"master",
+						"user",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "common user login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"teste\",\r\n    \"password\": \"testeteste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/service/user/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"service",
+						"user",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "common user get own profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDFkNjMwOTQyZjgwYjAwMjEyMzQzZjciLCJsb2dpbl90eXBlIjoiY29tbW9uIiwiaWF0IjoxNjEyNTM4OTE1LCJleHAiOjE2MTI1MzkyMTV9.KMHQcDKD4Hzqb2ytUu9kyZln5HGMzq7juijgxEW-D0U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/service/user/profile/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"service",
+						"user",
+						"profile",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "common user patch own profile",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDFkNjMwOTQyZjgwYjAwMjEyMzQzZjciLCJsb2dpbl90eXBlIjoiY29tbW9uIiwiaWF0IjoxNjEyNTM4OTE1LCJleHAiOjE2MTI1MzkyMTV9.KMHQcDKD4Hzqb2ytUu9kyZln5HGMzq7juijgxEW-D0U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"patched\",\r\n    \"username\": \"patched\",\r\n    \"password\": \"patchedddd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/service/user/profile/update/:user_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"service",
+						"user",
+						"profile",
+						"update",
+						":user_id"
+					],
+					"variable": [
+						{
+							"key": "user_id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
